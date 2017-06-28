@@ -1,10 +1,13 @@
-# vscode-purescript-emmet README
+# vscode-purescript-emmet
 
-A work in progress to enable purescript-emmet in VSCode.
+VSCode extension for purescript-emmet.
 
-```
-Ctrl+Shift+p
-Search for "Halogen Emmet" command
-```
+### Default Keybinding
 
-Make sure to have purescript-emmet in your system path (probably via npm install -g purescript-emmet)
+Type the expression and then press `Alt+Shift+y` to run the "Halogen to Emmet HTML" command.
+
+### Dependencies
+
+You will need [purescript-emmet](https://github.com/kRITZCREEK/purescript-emmet) installed on your system, and
+available in your PATH.  Alternativly, you can set the absolute path to purescript-emmet using the `purescriptEmmet.path`
+configuration variable.

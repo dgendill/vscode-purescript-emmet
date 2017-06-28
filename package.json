@@ -11,14 +11,30 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.emmetHalogen"
+        "onCommand:extension.emmetHalogen",
+        "onLanguage:purescript"
     ],
     "main": "./out/src/extension",
     "contributes": {
         "commands": [{
             "command": "extension.emmetHalogen",
-            "title": "Emmet Halogen"
-        }]
+            "title": "Emmet to Halogen HTML"
+        }],
+        "keybindings": [{
+			"command": "extension.emmetHalogen",
+			"key": "Alt+Shift+Y"
+		}],
+        "configuration": {
+            "type": "object",
+            "title": "vscode-purescript-emmet configuration",
+            "properties": {
+                "purescriptEmmet.path": {
+                    "type": "string",
+                    "default": null,
+                    "description": "The absolute path to the purescript-emmet executable.  If not set the global executable will be used."
+                }
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
