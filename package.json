@@ -2,7 +2,7 @@
     "name": "vscode-purescript-emmet",
     "displayName": "vscode-purescript-emmet",
     "description": "vscode extension for purescript-emmet",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "spacethimble",
     "engines": {
         "vscode": "^1.13.0"
@@ -16,14 +16,18 @@
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.emmetHalogen",
-            "title": "Emmet to Halogen HTML"
-        }],
-        "keybindings": [{
-			"command": "extension.emmetHalogen",
-			"key": "Alt+Shift+Y"
-		}],
+        "commands": [
+            {
+                "command": "extension.emmetHalogen",
+                "title": "Emmet to Halogen HTML"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.emmetHalogen",
+                "key": "Alt+Shift+Y"
+            }
+        ],
         "configuration": {
             "type": "object",
             "title": "vscode-purescript-emmet configuration",
