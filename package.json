@@ -3,7 +3,7 @@
     "displayName": "vscode-purescript-emmet",
     "description": "vscode extension for purescript-emmet",
     "version": "0.0.1",
-    "publisher": "Dom",
+    "publisher": "spacethimble",
     "engines": {
         "vscode": "^1.13.0"
     },
