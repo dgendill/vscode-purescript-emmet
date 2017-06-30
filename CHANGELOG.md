@@ -1,3 +1,10 @@
+<a name="0.1.3"></a>
+## [0.1.3]
+
+### Bug Fixes
+
+* Text matcher for expressions now allows +, _, and other required symbols.
+
 <a name="0.1.2"></a>
 ## [0.1.2]
 

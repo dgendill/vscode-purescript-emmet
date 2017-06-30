@@ -17,7 +17,7 @@ export function activate(context: vscode.ExtensionContext) {
 
             const position = editor.selection.active;
 
-            var range = doc.getWordRangeAtPosition(position, /[a-zA-Z.^\-\[\]#>0-9]+/g);
+            var range = doc.getWordRangeAtPosition(position, /[a-zA-Z.^+\-_\[\]#>0-9]+/g);
             var text = doc.getText(range);
             
 
