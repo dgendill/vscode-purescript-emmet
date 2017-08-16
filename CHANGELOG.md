@@ -1,3 +1,8 @@
+<a name="1.0.0"></a>
+## [1.0.0]
+
+* Now only supporting the symbols in the master branch of purescript-emmet. `a-z`, `A-Z`, `0-9`, `-`, `.`, `+`, `*`, `#`, `(`, `)`. Added tests and ability to customize the regular expression that matches abbreviations by using the `purescriptEmmet.regexp` setting.
+
 <a name="0.1.3"></a>
 ## [0.1.3]
 

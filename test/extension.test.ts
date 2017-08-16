@@ -1,22 +1,34 @@
-//
-// Note: This example test is leveraging the Mocha test framework.
-// Please refer to their documentation on https://mochajs.org/ for help.
-//
-
-// The module 'assert' provides assertion methods from node
 import * as assert from 'assert';
-
-// You can import and use all API from the 'vscode' module
-// as well as import your extension to test it
 import * as vscode from 'vscode';
-import * as myExtension from '../src/extension';
+import * as lib from '../src/extension';
 
-// Defines a Mocha test suite to group tests of similar kind together
-suite("Extension Tests", () => {
+// Assert that the default regexp will match the
+// exact text passed in.
+// String -> Eff (assert :: ASSERT) Unit
+function assertIdentity(text) {
+  let r = new RegExp(lib.defaultRegexp).exec(text);
+  if (r) {
+    assert.equal(text, r[0]);
+  } else {
+    assert.equal(text, null);
+  }  
+}
 
-    // Defines a Mocha unit test
-    test("Something 1", () => {
-        assert.equal(-1, [1, 2, 3].indexOf(5));
-        assert.equal(-1, [1, 2, 3].indexOf(0));
-    });
+// String -> Eff (test :: TEST, assert :: ASSERT) Unit
+// Assert that a the default regular expression will match
+// the text passed in.
+function identityTest(text) {
+  test("RegExp matches " + text, () => {
+    assertIdentity(text);
+  });
+}
+
+suite("purescript-vs-code extension tests", () => {
+  let tests = [
+    "div.class-name>span.class_name+span.sib_class_name*5",
+    "div.class-name>span.class_name+span#id",
+    "div.class-name>span.class_name+span#id>(div>child)"
+  ];
+
+  tests.forEach(identityTest);
 });
