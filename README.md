@@ -12,7 +12,7 @@ Type the emmet abbreviation and then press `Alt+Shift+y` to execute the "Halogen
 | Setting | Value  |
 | ------- | ------ |
 | purescriptEmmet.path | null |
-| purescriptEmmet.regexp | "[a-zA-Z0-9_\\-.+*#>()]+" |
+| purescriptEmmet.regexp | [a-zA-Z0-9_\\-.+*#>()]+ |
 
 ### Dependencies
 
